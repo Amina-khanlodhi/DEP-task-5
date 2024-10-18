@@ -1,0 +1,106 @@
+/* Base Styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    margin: 0;
+    padding: 18px;
+}
+
+h2 {
+    text-align: center;
+}
+
+form {
+    max-width: 450px;
+    margin: 0 auto;
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+label {
+    font-weight: bold;
+    display: block;
+    margin-bottom: 8px;
+}
+
+input, select, textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 2px solid #ddd;
+    border-radius: 4px;
+    transition: border-color 0.3s ease;
+    font-size: 16px;
+}
+
+input:focus, textarea:focus, select:focus {
+    outline: none;
+    border-color: #007BFF;
+    box-shadow: 0px 0px 5px rgba(0, 123, 255, 0.5);
+}
+
+/* Error Styles */
+.error {
+    color: #e74c3c;
+    font-size: 0.85em;
+    margin-top: -15px;
+    margin-bottom: 10px;
+    display: none;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out, transform 0.3s ease;
+}
+
+input[aria-invalid="true"] {
+    border-color: #e74c3c;
+    animation: shake 0.3s ease;
+}
+
+input[aria-invalid="false"] {
+    border-color: #2ecc71;
+}
+
+/* Valid Feedback */
+.valid {
+    color: #2ecc71;
+    font-size: 0.85em;
+    margin-top: -15px;
+    margin-bottom: 10px;
+    display: none;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out, transform 0.3s ease;
+}
+
+/* Shake Animation for Errors */
+@keyframes shake {
+    0% { transform: translateX(0); }
+    25% { transform: translateX(-5px); }
+    50% { transform: translateX(5px); }
+    75% { transform: translateX(-5px); }
+    100% { transform: translateX(0); }
+}
+
+/* Submit Button */
+input[type="submit"] {
+    width: 100%;
+    background-color: #6f7984;
+    color: rgb(26, 24, 24);
+    font-size: 20px;
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+input[type="submit"]:hover {
+    background-color: #92b1d2;
+}
+
+/* Show Error and Valid Feedback */
+.show {
+    display: block;
+    opacity: 1;
+    transform: translateY(0);
+}
